@@ -7,7 +7,6 @@ var schema = new Schema({
     password: {type: String, required: true},
     email: {type: String, required: true, unique: true},
     student: {type: Schema.Types.ObjectId, ref: 'Student'}
-    //messages: [{type: Schema.Types.ObjectId, ref: 'Message'}]
 });
 
 module.exports = mongoose.model('User', schema);

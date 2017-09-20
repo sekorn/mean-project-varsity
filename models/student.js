@@ -8,10 +8,12 @@ var schema = new Schema({
     phone: {type: String, required: true},
     img: {type: String},
     caption: {type: String},
-    details: {type: String},
+    description: {type: String},
+    details: {type: Object},
     schoolName: {type: String, required: true},
     classYear: {type: String, required: true},
     key: {type: String, required: true},
+    media: [{type: Schema.Types.ObjectId, ref: 'Media'}],
     invites: [{type: Schema.Types.ObjectId, ref: 'Invite'}],
     approvedUsers: [{type: Schema.Types.ObjectId, ref: 'User'}]
 });
